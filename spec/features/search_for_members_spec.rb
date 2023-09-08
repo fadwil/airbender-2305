@@ -6,5 +6,11 @@ RSpec.describe "Search for members of a nation" do
     
     select "Fire Nation", from: "nation" 
     click_button "Search For Members"
+
+    expect(current_path).to eq("/search")
+
+    expect(page).to have_content("Total members: 97")
+
+    expect
   end
 end
