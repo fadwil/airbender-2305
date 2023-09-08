@@ -6,6 +6,9 @@
     <% @members.first(25).each do |member| %>
       <li>
         <h2>Name: <%= member.name %></h2>
+        <% if member.photo.present? %>
+          <img src="<%= member.photo %>" alt="<%= member.name %> Photo">
+        <% end %>
         <p>Allies:
           <% if member.allies.present? %>
             <%= member.allies.join(', ') %>

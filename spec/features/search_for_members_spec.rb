@@ -17,6 +17,7 @@ RSpec.describe "Search for members of a nation" do
       expect(page).to have_content('Allies:')
       expect(page).to have_content('Enemies:')
       expect(page).to have_content('Affiliations:')
+      expect(page).to have_css('img')
     end
   end
 end

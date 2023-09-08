@@ -18,5 +18,7 @@ RSpec.describe AirbenderService do
     expect(service[0][:name]).to be_a(String)
     expect(service[0]).to have_key(:affiliation)
     expect(service[0][:affiliation]).to be_a(String)
+    expect(service[0]).to have_key(:photoUrl)
+    expect(service[0][:affiliation]).to be_a(String)
   end
 end

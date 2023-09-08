@@ -10,5 +10,6 @@ RSpec.describe AirbenderFacade do
     expect(members.first.allies).to be_a(Array)
     expect(members.first.enemies).to be_a(Array)
     expect(members.first.affiliation).to be_a(String)
+    expect(members.first.photo).to be_a(String)
   end
 end
