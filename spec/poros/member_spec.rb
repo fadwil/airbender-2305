@@ -1,15 +1,15 @@
 require "rails_helper"
 
-RSpec.describe AirbenderCharacter do
+RSpec.describe Member do
   it "exists and has attributes" do
-    character = AirbenderCharacter.new({
+    character = Member.new({
       name: "Character 1",
       allies: ["Ally 1", "Ally 2"],
       enemies: ["Enemy 1"],
       affiliation: "Affiliation 1"
     })
 
-    expect(character).to be_a(AirbenderCharacter)
+    expect(character).to be_a(Member)
     expect(character.name).to eq("Character 1")
     expect(character.allies).to eq(["Ally 1", "Ally 2"])
     expect(character.enemies).to eq(["Enemy 1"])
