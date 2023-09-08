@@ -1,0 +1,33 @@
+<div class="search-results">
+  <h1>Search Results</h1>
+  <p>Total Members: <%= @members.count %></p>
+
+  <ul class="members-list">
+    <% @members.first(25).each do |member| %>
+      <li>
+        <h2>Name: <%= member.name %></h2>
+        <p>Allies:
+          <% if member.allies.present? %>
+            <%= member.allies.join(', ') %>
+          <% else %>
+            None
+          <% end %>
+        </p>
+        <p>Enemies:
+          <% if member.enemies.present? %>
+            <%= member.enemies.join(', ') %>
+          <% else %>
+            None
+          <% end %>
+        </p>
+        <p>Affiliations:
+          <% if member.affiliation.present? %>
+            <%= member.affiliation %>
+          <% else %>
+            None
+          <% end %>
+        </p>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -9,8 +9,14 @@ RSpec.describe "Search for members of a nation" do
 
     expect(current_path).to eq("/search")
 
-    expect(page).to have_content("Total members: 97")
+    expect(page).to have_content("Total Members: 97")
 
-    expect
+    within('ul.members-list') do
+      expect(page).to have_selector('li', count: 25) # Assuming you want to check the first 25
+      expect(page).to have_content('Name:')
+      expect(page).to have_content('Allies:')
+      expect(page).to have_content('Enemies:')
+      expect(page).to have_content('Affiliations:')
+    end
   end
 end

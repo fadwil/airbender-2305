@@ -10,6 +10,5 @@ RSpec.describe AirbenderFacade do
     expect(members.first.allies).to be_a(Array)
     expect(members.first.enemies).to be_a(Array)
     expect(members.first.affiliation).to be_a(String)
-    require 'pry'; binding.pry
   end
 end
